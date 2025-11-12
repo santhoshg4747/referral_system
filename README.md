@@ -56,7 +56,7 @@ A modern e-commerce platform with integrated referral system, built with Laravel
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/santhoshg4747/referral-system.git
+   git clone https://github.com/santhoshg4747/referral_system.git
    cd referral-system
    ```
 
