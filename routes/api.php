@@ -56,6 +56,5 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/products/{product}/gallery/{image}', [ProductController::class, 'deleteGalleryImage']);
         
         // Category management
-        Route::apiResource('categories', CategoryController::class);
     });
 });
