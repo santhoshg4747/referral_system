@@ -24,8 +24,6 @@ Route::post('/login', [AuthController::class, 'login']);
 // Public product routes
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
-Route::get('/categories', [ProductController::class, 'categories']);
-Route::get('/categories/{category}/products', [ProductController::class, 'productsByCategory']);
 
 // Protected routes (require authentication)
 Route::middleware('auth:sanctum')->group(function () {

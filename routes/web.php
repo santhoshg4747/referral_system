@@ -45,9 +45,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::post('login', [AdminAuthController::class, 'store']);
 
-        Route::get('register', function () {
-            return Inertia::render('Auth/Register', ['isAdminRegistration' => true]);
-        })->name('register');
+        Route::get('register', [\App\Http\Controllers\Auth\RegisteredUserController::class, 'create'])
+            ->name('register');
+            
+        Route::post('register', [\App\Http\Controllers\Auth\RegisteredUserController::class, 'store'])
+            ->name('register.post');
     });
     
     // Protected admin routes - using fully qualified middleware class

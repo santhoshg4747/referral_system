@@ -18,7 +18,8 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.post(route('register'), {
+    const routeName = isAdminRegistration ? 'admin.register.post' : 'register';
+    form.post(route(routeName), {
         onFinish: () => {
             form.reset('password', 'password_confirmation');
         },
